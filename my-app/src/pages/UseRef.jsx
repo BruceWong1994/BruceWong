@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/common.css';
 
 class UseRef extends React.Component {
     constructor() {
@@ -11,25 +12,29 @@ class UseRef extends React.Component {
     }
 
     handleChange = event => {
-        console.log(this.refs);
-
-        let a = parseInt(this.refs.a.value) || 0;
-        let b = parseInt(this.refs.b.value) || 0;
+        // let a = parseInt(this.refs.a.value) || 0;
+        let a = parseInt(this.a.value) || 0;
+        // let b = parseInt(this.refs.b.value) || 0;
+        let b = parseInt(this.b.value) || 0;
         // this.refs.sum.value = a+b || 0;
+
         this.setState({
-            sum:a+b
+            sum: a + b
         })
-        
     }
+
     render() {
         return (
-            <div>
-                <input type="text" ref='a' onChange={this.handleChange} defaultValue={0} /> +
-                <input type="text" ref='b' onChange={this.handleChange} defaultValue={0} /> =
-                <input value={this.state.sum} />
+            <div className='block'>
+                <p>UseRef 组件</p>
+                {/* <input type="text" ref='a' onChange={this.handleChange} /> +
+                <input type="text" ref='b' onChange={this.handleChange} /> = */}
+                <input type="text" ref={ref => this.a = ref} onChange={this.handleChange} defaultValue={0} /> +
+                <input type="text" ref={ref => this.b = ref} onChange={this.handleChange} defaultValue={0} /> =
+                <input type='text' readOnly value={this.state.sum} />
             </div>
         )
     }
 }
 
-export default UseRef
+export default UseRef;

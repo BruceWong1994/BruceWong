@@ -29,7 +29,8 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='block'>
+                <p>Calculator 组件</p>
                 <input type="text" onChange={this.handleChange} name='a' value={this.state.a} /> +
                 <input type="text" onChange={this.handleChange} name='b' value={this.state.b} /> =
                 <span>{this.state.sum}</span>
