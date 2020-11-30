@@ -1,5 +1,6 @@
 import React from 'react';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
+import UseRefN from './UseRefNew';
 
 class MainPage extends React.Component {
 
@@ -7,7 +8,8 @@ class MainPage extends React.Component {
         return(
             <div className='outer-wrapper'>
                 
-                <SearchBar />
+                <UseRefN />
+                {/* <SearchBar /> */}
             </div>
         )
     }
