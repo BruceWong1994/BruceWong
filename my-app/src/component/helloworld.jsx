@@ -4,12 +4,12 @@ import React,{Component} from "react";
      constructor(props){
          super(props);
          this.state = {
-             str: 'Hello World~  This is Bruce Wong',
+             welcomeTitle: 'Hi there!  This is Bruce Wong~',
          };
      }
      render() {
          return (
-             <div style={{fontSize: 20 }}>{this.state.str}</div>
+             <div style={{fontSize: 20 }}>{this.state.welcomeTitle}</div>
          )
      }
  }

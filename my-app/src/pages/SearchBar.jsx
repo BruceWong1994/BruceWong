@@ -32,7 +32,7 @@ export default class SearchBar extends React.Component {
 
     render() {
         return (
-            <div style={{ margin: 50 }}>
+            <div>
                 <p>
                     <input type="text" style={{ width: 400, height: 30, border: '1px solid #aaa' }} value={this.state.value} onChange={this.handleChange} />
                     <button style={{ height: 30, marginLeft: 10 }}>搜索</button>
