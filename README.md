@@ -1,2 +1,0 @@
-# BruceWong
-ChunyangWang's github
