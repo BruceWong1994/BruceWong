@@ -8,12 +8,11 @@ import UseRef from './UseRef';
 import UseRefN from './UseRefNew';
 import SearchBar from './SearchBar';
 import UserManage from './UserMange/UserManage';
-
 import Login from './Login/Login';
 import Settings from './Settings/Settings';
+import CounterByRedux from '../reduxByMyself/CounterByRedux';
 
 export default class MainPage extends React.Component {
-
     render() {
         return (
             <Router>
@@ -35,12 +34,13 @@ class LeftNav extends React.Component {
     render() {
         return (
             <>
-                <Link className='link-nav' to='/' >主页</Link>
+                <Link className='link-nav' to='/' >首页</Link>
+                <Link className='link-nav' to='/settings'>设置</Link>
                 <Link className="link-nav" to='/users'>用户列表</Link>
                 <Link className='link-nav' to='/searchBar' >搜索栏</Link>
                 <Link className='link-nav' to='/useRef' >练习ref</Link>
                 <Link className='link-nav' to='/useRefNew' >练习ref新方式</Link>
-                <Link className='link-nav' to='/settings'>设置</Link>
+                <Link className='link-nav' to='/reduxByMyself'>练习redux</Link>
             </>
         )
     }
@@ -57,6 +57,7 @@ class RouteList extends React.Component {
                 <Route path='/useRefNew' component={UseRefN} />
                 <Route path='/login' component={Login} />
                 <Route path='/settings' component={Settings} />
+                <Route path='/reduxByMyself' component={CounterByRedux} />
             </Switch>
         )
     }

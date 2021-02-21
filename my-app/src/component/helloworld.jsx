@@ -9,7 +9,10 @@ import React,{Component} from "react";
      }
      render() {
          return (
-             <div style={{fontSize: 20 }}>{this.state.welcomeTitle}</div>
+            <>
+                <p style={{fontSize: 30, marginBottom: 20}}>首页</p>
+                <div style={{fontSize: 20 }}>{this.state.welcomeTitle}</div>
+            </>
          )
      }
  }
