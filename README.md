@@ -1,4 +1,6 @@
 # BruceWong
 ChunyangWang's github
 
-This is an item written by React
+****************************************
+This is a project built by React
+****************************************
