@@ -1,4 +1,1 @@
-# BruceWong
-****************************************
-This is a project built by React
-****************************************
+This is a project built by React.
