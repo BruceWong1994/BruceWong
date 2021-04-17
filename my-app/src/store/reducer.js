@@ -2,21 +2,34 @@
 import {
     INCREASE,
     DECREASE,
-  } from './actions';
-  
-  const initialState = {
+} from './actions';
+
+const initialState = {
     number: 0,
-  };
-  function reducer(state = initialState, action) {
+    list: ['初始内容...']
+};
+function reducer(state = initialState, action) {
+    // console.log(action);
     switch (action.type) {
-      case INCREASE:
-        return { number:state.number + action.amount };
-      case DECREASE:
-        return { number:state.number - action.amount };
-      default:
-        return state;
+        case INCREASE:
+            return { number: state.number + action.amount }
+        case DECREASE:
+            return { number: state.number - action.amount }
+        case 'plus':
+            return { number: state.number + action.act }
+        case 'minus':
+            return { number: state.number - action.act }
+        case 'addtodo':
+            let ll = [...state.list];
+            ll.unshift(action.act);
+            // console.log(ll);
+            // console.log(typeof ll);
+            // console.log(typeof(typeof ll));
+            // console.log(ll instanceof Array);
+            return Object.assign({}, state, { list: ll })
+        default:
+            return state;
     }
-  }
-  
-  export default reducer;
-  
+}
+
+export default reducer;

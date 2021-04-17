@@ -10,7 +10,8 @@ import SearchBar from './SearchBar';
 import UserManage from './UserMange/UserManage';
 import Login from './Login/Login';
 import Settings from './Settings/Settings';
-import CounterByRedux from '../reduxByMyself/CounterByRedux';
+// import CounterByRedux from '../reduxByMyself/CounterByRedux';
+import TodoList from './PracticeRedux/GenerateTodoList';
 
 export default class MainPage extends React.Component {
     render() {
@@ -57,7 +58,7 @@ class RouteList extends React.Component {
                 <Route path='/useRefNew' component={UseRefN} />
                 <Route path='/login' component={Login} />
                 <Route path='/settings' component={Settings} />
-                <Route path='/reduxByMyself' component={CounterByRedux} />
+                <Route path='/reduxByMyself' component={TodoList} />
             </Switch>
         )
     }
